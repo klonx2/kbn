@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kebun Binatang Interaktif</title>
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    margin:0;
+    background:#e8f5e9;
+}
+
+/* HEADER */
+header{
+    background:#2e7d32;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+/* PENJELASAN */
+section{
+    padding:20px;
+}
+
+/* GRID HEWAN */
+.grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    padding:20px;
+    justify-content:center;
+}
+
+/* KOTAK HEWAN */
+.kotak{
+    background:white;
+    padding:12px 18px;
+    border-radius:12px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.kotak:hover{
+    background:#a5d6a7;
+    transform:scale(1.05);
+}
+
+/* AREA DETAIL */
+#detail{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+/* ANIMASI HEWAN */
+.animasi{
+    font-size:90px;
+    animation:lompat 0.8s infinite;
+}
+
+@keyframes lompat{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+    100%{transform:translateY(0);}
+}
+
+/* TOMBOL KEMBALI */
+.kembali{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.kembali:hover{
+    background:#1b5e20;
+    transform:scale(1.1);
+}
+
+footer{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🐾 Kebun Binatang Interaktif 🐾</h1>
+<p>Klik kotak hewan untuk melihat animasi dan penjelasannya</p>
+</header>
+
+<section>
+<h2>Apa itu Kebun Binatang?</h2>
+<p>
+Kebun binatang adalah tempat pemeliharaan berbagai jenis hewan untuk tujuan
+edukasi, konservasi, dan rekreasi. Melalui kebun binatang, pengunjung dapat
+mengenal keanekaragaman hewan dan pentingnya menjaga alam.
+</p>
+</section>
+
+<div class="grid">
+
+<div class="kotak" onclick="tampil('🦁','Singa adalah hewan karnivora yang hidup berkelompok dan dikenal sebagai raja hutan.')">Singa</div>
+<div class="kotak" onclick="tampil('🐯','Harimau adalah predator besar dengan loreng khas dan hidup menyendiri.')">Harimau</div>
+<div class="kotak" onclick="tampil('🐘','Gajah adalah mamalia darat terbesar dengan belalai panjang.')">Gajah</div>
+<div class="kotak" onclick="tampil('🦒','Jerapah memiliki leher panjang untuk menjangkau daun di pohon tinggi.')">Jerapah</div>
+<div class="kotak" onclick="tampil('🦓','Zebra memiliki garis hitam putih unik sebagai pelindung alami.')">Zebra</div>
+<div class="kotak" onclick="tampil('🐼','Panda berasal dari Tiongkok dan memakan bambu.')">Panda</div>
+<div class="kotak" onclick="tampil('🐻','Beruang adalah hewan omnivora.')">Beruang</div>
+<div class="kotak" onclick="tampil('🦘','Kanguru berasal dari Australia dan bergerak dengan melompat.')">Kanguru</div>
+<div class="kotak" onclick="tampil('🦍','Gorila adalah primata besar yang sangat cerdas.')">Gorila</div>
+<div class="kotak" onclick="tampil('🐊','Buaya adalah reptil air dengan rahang kuat.')">Buaya</div>
+<div class="kotak" onclick="tampil('🐍','Ular adalah reptil tanpa kaki dan beberapa jenis berbisa.')">Ular</div>
+<div class="kotak" onclick="tampil('🦅','Elang adalah burung pemangsa dengan penglihatan tajam.')">Elang</div>
+<div class="kotak" onclick="tampil('🦉','Burung hantu aktif pada malam hari.')">Burung Hantu</div>
+<div class="kotak" onclick="tampil('🐧','Penguin tidak bisa terbang tetapi pandai berenang.')">Penguin</div>
+<div class="kotak" onclick="tampil('🦈','Hiu adalah predator laut dengan gigi tajam.')">Hiu</div>
+<div class="kotak" onclick="tampil('🐢','Kura-kura memiliki cangkang keras sebagai pelindung.')">Kura-kura</div>
+<div class="kotak" onclick="tampil('🦜','Burung beo dapat menirukan suara manusia.')">Burung Beo</div>
+<div class="kotak" onclick="tampil('🦌','Rusa adalah hewan herbivora dengan tanduk.')">Rusa</div>
+<div class="kotak" onclick="tampil('🐒','Monyet adalah hewan yang lincah dan cerdas.')">Monyet</div>
+
+</div>
+
+<div id="detail">
+<h2>Detail Hewan</h2>
+<div id="emoji" class="animasi">🐾</div>
+<p id="teks">Klik salah satu kotak hewan di atas.</p>
+
+
+<br>
+<a href="index.html" class="kembali">⬅ Kembali ke Halaman Utama</a>
+
+</div>
+
+<footer>
+<p>© 2026 Kebun Binatang YaXian</p>
+</footer>
+
+<script>
+function tampil(emoji, teks){
+    document.getElementById("emoji").innerHTML = emoji;
+    document.getElementById("teks").innerText = teks;
+}
+</script>
+
+</body>
+</html>

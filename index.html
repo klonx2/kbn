@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Kebun Binatang YaXian</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to bottom, #a5d6a7, #e8f5e9);
+    overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+header h1{
+    margin:0;
+    font-size:40px;
+}
+
+/* AREA RAMAI */
+.ramai{
+    text-align:center;
+    padding:30px;
+}
+
+/* IKON HEWAN BERGERAK */
+.hewan-bergerak{
+    font-size:60px;
+    animation:gerak 3s infinite alternate;
+}
+
+@keyframes gerak{
+    0%{transform:translateX(-20px);}
+    100%{transform:translateX(20px);}
+}
+
+/* TOMBOL */
+.tombol{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 30px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.tombol:hover{
+    background:#1b5e20;
+    transform:scale(1.1);
+}
+
+/* INFO TAMBAHAN */
+.info{
+    background:white;
+    margin:30px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🐾 Kebun Binatang Nusantara 🐾</h1>
+<p>Wisata Edukasi dan Konservasi Satwa</p>
+</header>
+
+<div class="ramai">
+    <div class="hewan-bergerak">🦁 🐯 🐘 🦒 🦓 🐼 🐻 🦘 🦍 🐊 🐍 🦅 🦉 🐧 🦈</div>
+    
+    <h2>Selamat Datang!</h2>
+    <p>
+        Rasakan pengalaman seru menjelajahi dunia satwa.
+        Di sini kamu bisa belajar tentang berbagai hewan,
+        melihat animasi menarik, dan mengenal pentingnya menjaga alam.
+    </p>
+
+    <a href="hewan.html" class="tombol">Masuk ke Daftar Hewan</a>
+</div>
+
+<div class="info">
+<h2>Tentang Kebun Binatang</h2>
+<p>
+Kebun binatang adalah tempat pelestarian dan perawatan hewan dari berbagai belahan dunia.
+Selain sebagai tempat rekreasi, kebun binatang juga berfungsi sebagai pusat edukasi,
+penelitian, dan konservasi satwa langka.
+</p>
+
+<p>
+Dengan mengunjungi kebun binatang, kita dapat mengenal lebih dekat
+keanekaragaman hayati serta menumbuhkan rasa cinta terhadap lingkungan.
+</p>
+</div>
+
+<footer>
+<p>© 2026 Kebun Binatang YaXian</p>
+</footer>
+
+</body>
+</html>
